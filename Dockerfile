@@ -81,6 +81,5 @@ RUN export LEPTONICA_VERSION="1.76.0" && \
 	# Clear the cache
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean && \
-    wget https://github.com/tesseract-ocr/tessdata/raw/master/eng.traineddata && \
-    mv -v eng.traineddata /usr/local/share/tessdata/
-
+    wget https://github.com/tesseract-ocr/tessdata/raw/master/eng.traineddata -P /usr/local/share/tessdata && \
+    wget https://github.com/tesseract-ocr/tessdata/raw/master/osd.traineddata -P /usr/local/share/tessdata
