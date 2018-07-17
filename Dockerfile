@@ -80,5 +80,7 @@ RUN export LEPTONICA_VERSION="1.76.0" && \
 	mv /usr/bin/tesseract /usr/local/bin/tesseract4 && \
 	# Clear the cache
     rm -rf /var/lib/apt/lists/* && \
-    apt-get clean
+    apt-get clean && \
+    wget https://github.com/tesseract-ocr/tessdata/raw/master/eng.traineddata && \
+    mv -v eng.traineddata /usr/local/share/tessdata/
 
