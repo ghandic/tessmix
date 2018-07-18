@@ -6,10 +6,10 @@ FROM ubuntu:16.04
 
 MAINTAINER Andy Challis <andrewchallis@hotmail.co.uk>
 
+ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8' LEPTONICA_VERSION='1.76.0' TESSERACT3_VERSION='3.05.01'
+
 # Install all dependencies
-RUN export LEPTONICA_VERSION="1.76.0" && \
-	export TESSERACT3_VERSION="3.05.01" && \
-	apt-get update && \
+RUN apt-get update && \
 	apt-get install -y \
 	build-essential \
 	software-properties-common && \
